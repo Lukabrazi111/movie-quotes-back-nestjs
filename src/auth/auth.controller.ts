@@ -6,6 +6,6 @@ export class AuthController {
 
     @Post('register')
     async registerUser() {
-        return 'register user';
+        return 'register users';
     }
 }

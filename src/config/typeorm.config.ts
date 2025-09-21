@@ -8,9 +8,9 @@ const dataSourceOptions: DataSourceOptions = {
     username: process.env.DB_USERNAME || 'postgres',
     password: process.env.DB_PASSWORD || 'toor',
     database: process.env.DB_NAME || 'movie_quotes',
-    entities: [path.join(__dirname, '..', '**/*.entity{.js,.ts}')],
-    migrations: [path.join(__dirname, '..', 'migrations/*{.ts,.js}')],
     synchronize: false,
+    entities: [path.join(__dirname, '..', '**/*.entity{.ts, .js}')],
+    migrations: [path.join(__dirname, '..', 'migrations/*{.ts,.js}')],
 };
 
 export const AppDataSource = new DataSource(dataSourceOptions);
